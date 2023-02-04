@@ -1,0 +1,57 @@
+body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.bgWhite {
+  background-color: #fff;
+}
+
+.bgBlack {
+  background-color: #000;
+}
+
+.bgGrey {
+  background-color: #e7e7e7;
+}
+
+.imgCard {
+  max-height: 184px;
+}
+
+.iconImg {
+  filter: invert(100%);
+  width: 45px;
+}
+
+.bgCard {
+  background-color: #232323;
+  opacity: 0.8;
+}
+
+.buttonContainer {
+  background-color: black;
+  padding: 16px;
+  border-radius: 200px;
+  margin-bottom: 100px;
+}
+
+.buttonRounded {
+  padding: 12px 18px;
+  text-decoration: none;
+  color: #ebebec;
+}
+
+.buttonRounded:hover {
+  background-color: #fff;
+  border-radius: 200px;
+  color: black;
+}
+
+@media (min-width: 768px) & (max-width: 991px) {
+  .cardCont {
+    justify-content: center;
+  }
+  .cardCustom {
+    margin: 15px;
+  }
+}

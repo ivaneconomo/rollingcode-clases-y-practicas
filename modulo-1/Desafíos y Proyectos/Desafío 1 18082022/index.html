@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Iván Ecónomo" />
+    <meta name="description" content="Iván Ecónomo Curriculum" />
+    <meta name="keywords" content="Iván Ecónomo Curriculum HTML HTML5" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My CV HTML</title>
+  </head>
+  <body>
+    <!-- Header con logo y título -->
+    <header class="header">
+      <a class="header__a" href="#"
+        ><img
+          class="header__img"
+          src="./img/CV.png"
+          alt="Representación CV"
+          width="50"
+      /></a>
+      <h1 class="header__h1">Curriculum Vitae HTML</h1>
+    </header>
+    <!-- Sección principal con fotografía y datos de la persona -->
+    <main class="main">
+      <section class="section">
+        <h2 class="section__h2">Datos Personales</h2>
+        <div class="section__div">
+          <ul class="section__ul">
+            <li class="section__li">
+              Nombre completo: Iván David Ecónomo Colomo
+            </li>
+            <li class="section__li">Edad: 27 años</li>
+            <li class="section__li">Dirección: Tomas Godoy Cruz 18**</li>
+            <li class="section__li">Teléfonos: +54938155677**</li>
+            <li class="section__li">e-mail: ivan.economo39@gmail.com</li>
+            <li class="section__li">Estado civil: 7u7</li>
+          </ul>
+          <img
+            class="section__img"
+            src="./img/Yo.png"
+            alt="Fotografía del aplicante"
+          />
+        </div>
+      </section>
+      <!-- Sección Objetivo profesional de la persona -->
+      <section>
+        <article>
+          <h2>Objetivo profesional</h2>
+          <p>
+            En el inicio de mi carrera como programador me he propuesto como
+            objetivo adquirir todos los conocimientos necesarios para desempeñar
+            profecionalmente mi papel como desarrollador de páginas web.
+          </p>
+        </article>
+      </section>
+      <!-- Sección Formación, Experiencia, Idiomas de la persona -->
+      <section>
+        <article>
+          <h3>Formación edcuativa</h3>
+          <ul>
+            <li>
+              Secundario completo. Orientación en Economía y Gestión de las
+              Organizaciones.
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3>Experiencia laboral</h3>
+          <ul>
+            <li>
+              "TXM Ropa por Mayor" Encargado general - Cajero - Facturaciones -
+              Administración de personal - Operaciones comerciales. Desde
+              05/2016 - Actual
+            </li>
+            <li>
+              “Razón Social: Bautista, Martín Ezequiel” (cochera) Encargado.
+              Desde 06/2019 hasta 08/2020
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3>Idiomas</h3>
+          <ol>
+            <li>Español: Nativo</li>
+            <li>Inglés: Intermedio</li>
+          </ol>
+        </article>
+      </section>
+      <!-- Aside Otros intereses de la persona -->
+      <aside>
+        <h3>Otros intereses</h3>
+        <section>
+          <h4>Lenguajes de programación</h4>
+          <table>
+            <tbody>
+              <tr>
+                <th>Lenguaje</th>
+                <th>Nivel</th>
+              </tr>
+              <tr>
+                <td>C#</td>
+                <td>Básico</td>
+              </tr>
+              <tr>
+                <td>Python</td>
+                <td>Básico</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <article>
+            <h4>Programación de Videojuegos</h4>
+            <p>
+              Tengo un <span class="class">fuerte</span> interés en aprender
+              sobre desarrollo de videojuegos basados en lenguaje C# y Unity.
+            </p>
+          </article>
+        </section>
+      </aside>
+      <!-- Sección Formulario contacto con la persona -->
+      <section>
+        <form action="">
+          <h3>Contáctese conmigo</h3>
+          <label for="name">Nombre</label>
+          <input type="text" id="name" placeholder="Su nombre aquí" />
+          <label for="lastname">Apellido</label>
+          <input
+            type="text"
+            id="lastname"
+            placeholder="Su apellido aquí"
+          /><br />
+          <label for="message">Información</label><br />
+          <textarea
+            name="informacion"
+            id="message"
+            cols="30"
+            rows="10"
+          ></textarea
+          ><br />
+          <button type="reset">Formulario en blanco</button>
+          <input type="submit" />
+        </form>
+        <div>
+          <h4>O, envíe un e-mail</h4>
+          <a href="mailto: ivan.economo39@gmail.com" target="_blank"
+            >Enviar e-mail</a
+          >
+        </div>
+      </section>
+    </main>
+    <!-- Footer de la página -->
+    <footer>
+      <div>
+        <h4>Redes</h4>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/ivan.economo/" target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.reddit.com/user/Intelligent_Salary13"
+              target="_blank"
+              >Reddit</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <a href="#">Volver al inicio</a>
+      </div>
+    </footer>
+  </body>
+</html>

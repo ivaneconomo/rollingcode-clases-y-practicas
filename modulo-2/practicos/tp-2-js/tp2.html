@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prácticas 2 JS</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+  <header>
+    <nav class="navbar bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="../../index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left-short pb-1" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+          </svg>
+          Inicio
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="d-flex flex-column align-items-center my-5">
+      <h2 class="mb-3 pb-3 border-bottom">Ejercicios JavaScript - 2</h2>
+      <h3 class="">Prácticas con Bucles</h3>
+    </div>
+    <section class="container">
+      <!-- Ejercicio 1 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢</h4>
+        <p>1- Escribir un programa que solicite la edad y si es mayor de 18 años mostrar un mensaje que ya puede conducir, si la edad ingresada no es un número válido indicarlo en un mensaje.</p>
+        <button class="btn btn-dark" onclick="resultadoEj1()">Resultado</button>
+        <h5 id="resultado1" class="mt-3"></h5>
+      </article>
+      <!-- Ejercicio 2 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>2- Escribir un programa que solicite una nota (número) de 0  a 10. Luego mostrar la calificación en un alert según los siguientes rangos de nota:</p>
+        <ul>
+          <li>0-2: Muy deficiente</li>
+          <li>3-4: Insuficiente</li>
+          <li>5-6: Suficiente</li>
+          <li>7: Bien</li>
+          <li>8-9: Notable</li>
+          <li>10: Sobresaliente</li>
+        </ul>
+        <p>Si ingreso un número que no esté dentro del rango de 0 a 10 mostrar un mensaje de “número erróneo”. Si el número ingresado no es válido mostrar el mensaje “Introduce un número válido”.</p>
+        <button class="btn btn-dark" onclick="resultadoEj2()">Resultado</button>
+      </article>
+      <!-- Ejercicio 3 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>3- Realiza un script que pida cadenas de texto  hasta que se pulse “cancelar”. Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión -. Nota: usar <a href="https://www.w3schools.com/jsref/met_win_confirm.asp" target="_blank">confirm()</a></p>
+        <button class="btn btn-dark" onclick="resultadoEj3()">Resultado</button>
+        <h5 id="resultado3" class="mt-3"></h5>
+      </article>
+      <!-- Ejercicio 4 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>4- Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un «alert» y seguir pidiendo números. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.</p>
+        <button class="btn btn-dark" onclick="resultadoEj4()">Resultado</button>
+        <h5 id="resultado4" class="mt-3"></h5>
+      </article>
+      <!-- Ejercicio 5 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡🔴</h4>
+        <p>5- Realizar una página con un script que calcule el valor de la letra de un número de DNI (Documento nacional de identidad).<br>El algoritmo para calcular la letra del DNI es el siguiente:<br>El número debe ser entre 0 y 99999999<br>Debemos calcular el resto de la división entera entre el número y el número 23.<br>Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes:<br>(T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E).<br>Si lo introducido no es un número deberá indicarse con un alert y volver a preguntar. Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».</p>
+        <button class="btn btn-dark" onclick="resultadoEj5()">Resultado</button>
+        <h5 id="resultado5" class="mt-3"></h5>
+      </article>
+      <!-- Ejercicio 6 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>6- Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma:</p>
+        <pre>
+          1
+          22
+          333
+          4444
+          55555
+          666666
+          .......
+        </pre>
+        <button class="btn btn-dark" onclick="resultadoEj6()">Resultado</button>
+        <pre id="resultado6" class="mt-3"></pre>
+      </article>
+      <!-- Ejercicio 7 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>7- Haz un script que escriba una pirámide inversa de los números del 1 al número que indique el usuario (no mayor de 50)  de la siguiente forma : (suponiendo que indica 30).</p>
+        <pre>
+          303030303030303030303030303030303030303030303030303030303030
+          2929292929292929292929292929292929292929292929292929292929
+          28282828282828282828282828282828282828282828282828282828
+          ......
+          333
+          22
+          1
+        </pre>
+        <button class="btn btn-dark" onclick="resultadoEj7()">Resultado</button>
+        <pre id="resultado7" class="mt-3"></pre>
+      </article>
+      <!-- Ejercicio 8 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>8- Crea script para generar pirámide siguiente con los números del 1 al número que indique el usuario (no mayor de 50).</p>
+        <pre>
+          1
+          12
+          123
+          1234
+          12345
+          123456
+          ......
+        </pre>
+        <button class="btn btn-dark" onclick="resultadoEj8()">Resultado</button>
+        <pre id="resultado8" class="mt-3"></pre>
+      </article>
+      <!-- Ejercicio 9 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡🔴</h4>
+        <p>9- Crea un script que escriba los números del 1 al 500, que indique cuáles son múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por ejemplo:</p>
+        <pre>
+          1
+          2
+          3
+          4 (Múltiplo de 4)
+          5
+          ------------------
+          6
+          7
+          8 (Múltiplo de 4)
+          9 (Múltiplo de 9)
+          10
+        </pre>
+        <button class="btn btn-dark" onclick="resultadoEj9()">Resultado</button>
+        <pre id="resultado9" class="mt-3"></pre>
+      </article>
+      <!-- Ejercicio 10 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡🔴</h4>
+        <p>10- Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro de cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7x5 los números irán del 35 al 1.</p>
+        <button class="btn btn-dark" onclick="resultadoEj10()">Resultado</button>
+        <pre id="resultado10" class="mt-3"></pre>
+      </article>
+    </section>
+    <!-- Ejercicios con Math -->
+    <section class="container">
+      <h3 class="mb-3 pb-3 border-bottom">Ejercicios con Math()</h3>
+      <!-- Ejercicio 11 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>11- Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. Nota: ver funcion <a href="https://www.w3schools.com/js/js_math.asp" target="_blank">Math()</a></p>
+        <button class="btn btn-dark" onclick="resultadoEj11()">Resultado</button>
+        <pre id="resultado11" class="mt-3"></pre>
+      </article>
+      <!-- Ejercicio 12 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>12- Realiza un script que genere un número aleatorio entre 1 y 99.</p>
+        <button class="btn btn-dark" onclick="resultadoEj12()">Resultado</button>
+        <pre id="resultado12" class="mt-3"></pre>
+      </article>
+    </section>
+    <!-- Ejercicios con String -->
+    <section class="container">
+      <h3 class="mb-3 pb-3 border-bottom">Ejercicios con String</h3>
+      <!-- Ejercicio 13 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>13- Realiza un script que pida un texto y lo muestre en mayúsculas.</p>
+        <button class="btn btn-dark" onclick="resultadoEj13()">Resultado</button>
+        <pre id="resultado13" class="mt-3"></pre>
+      </article>
+      <!-- Ejercicio 14 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>14- Realiza un script que pida una cadena de texto y lo muestre poniendo el signo - entre cada carácter sin usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”.</p>
+        <button class="btn btn-dark" onclick="resultadoEj14()">Resultado</button>
+        <pre id="resultado14" class="mt-3"></pre>
+      </article>
+      <!-- Ejercicio 15 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>15- Realiza un script que cuente el número de vocales que tiene un texto.</p>
+        <button class="btn btn-dark" onclick="resultadoEj15()">Resultado</button>
+        <pre id="resultado15" class="mt-3"></pre>
+      </article>
+      <!-- Ejercicio 16 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>16- Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”.</p>
+        <button class="btn btn-dark" onclick="resultadoEj16()">Resultado</button>
+        <pre id="resultado16" class="mt-3"></pre>
+      </article>
+      <!-- Ejercicio 17 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢</h4>
+        <p>17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.</p>
+        <button class="btn btn-dark" onclick="resultadoEj17()">Resultado</button>
+        <pre id="resultado17" class="mt-3"></pre>
+      </article>
+    </section>
+  </main>
+  <footer class="bg-dark text-center text-white py-4">
+    <p>Rolling Code comisión 25i - Iván Ecónomo - 2022</p>
+  </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <!-- JS custom -->
+  <script src="./js/app.js"></script>
+</body>
+</html>

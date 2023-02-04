@@ -1,0 +1,79 @@
+/* 
+SELECTORES DE ESTILO
+etiqueta
+.class
+#id
+*todos
+[]atributo
+
+SELECTOR HERMANOS
+etiqueta o atributo + etiqueta o atributo:el que sigue
+etiqueta o atributo > etiqueta o atributo: hasta el
+etiqueta o atributo ~ etiqueta o atributo hermanos
+
+SELECTOR DE TODOS LOS DESCENDIENTES
+etiqueta o atributo etiqueta o atributo
+ */
+
+/* 
+Facebook colors
+#3b5998
+#6d84b4
+#afbdd4
+#d8dfea
+#ffffff
+*/
+
+
+* {
+  margin: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #ffffff;
+}
+/* Header con logo y título */
+.header {
+  padding: 1%;
+  background-color: #3b5998;
+}
+.header__img {
+  float: left;
+  filter: invert(100%);
+  width: 60px;
+  height: 60px;
+}
+.header__h1 {
+  text-align: center;
+  font-size: 50px;
+  color: #ffffff;
+}
+
+/* Sección principal con fotografía y datos de la persona */
+.section__h2{
+margin-left: 20px;
+margin-top: 10px;
+}
+.section__div{
+  margin: 20px;
+  padding: 30px;
+  font-size: 150%;
+  height: 100%;
+  border: solid #3b5998;
+  background-color: #d8dfea;
+}
+.section__ul {
+  padding: 5%;
+  display: inline-block;
+  /* float: right; */
+}
+.section__img{
+  text-align: right;
+  border: solid 3px #3b5998;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+
+/* Sección Objetivo profesional de la persona */
+

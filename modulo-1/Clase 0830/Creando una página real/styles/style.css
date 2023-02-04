@@ -1,0 +1,88 @@
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  margin: 0;
+  background-color: #efefef;
+}
+
+img {
+  width: 400px;
+}
+
+header {
+  background-color: rgb(46, 46, 131);
+  color: #fff;
+  padding: 3rem 2rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+header ul {
+  text-align: center;
+}
+
+header ul li {
+  display: inline-block;
+  margin-right: 50px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+header ul li:hover{
+  background-color: rgb(57, 57, 160);
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+section article {
+  background-color: #fff;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0;
+  cursor: pointer;
+}
+section article:hover {
+  box-shadow: rgb(57, 57, 160) 0px 0px 0px 1px;
+  
+}
+
+section article h2,
+section article p {
+  margin: 1rem;
+}
+
+footer {
+  background-color: crimson;
+  text-align: center;
+}
+
+footer ul li {
+  margin-right: 50px;
+  display: inline-block;
+}
+
+a {
+  padding: 10px;
+  border-radius: 10px;
+  height: 3rem;
+  line-height: 3rem;
+  text-decoration: none;
+  color: #efefef;
+}
+
+a:hover {
+  background-color: rgb(236, 27, 68);
+}
+
+.copy {
+  height: 3rem;
+  line-height: 3rem;
+  color: #efefef;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Iván Ecónomo" />
+    <meta name="description" content="Iván Ecónomo Curriculum" />
+    <meta name="keywords" content="Iván Ecónomo Curriculum HTML HTML5" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>My CV HTML</title>
+  </head>
+  <!-- Body -->
+  <body id="body">
+    <!-- Main - Contenido principal -->
+    <main id="container">
+      <!-- Header - Icono y Título -->
+      <header id="header">
+        <!-- <a class="header__a" href="#"> -->
+        <!-- <img class="header__img" src="./img/MyCV.png" alt="MyCV Icon" /> -->
+        <h1 class="header__h1">Curriculum Vitae HTML</h1>
+        <!-- </a> -->
+      </header>
+      <!-- Nav - Barra de navegación y atajos a los Articles -->
+      <nav id="nav">
+        <ul class="ul">
+          <li>
+            <a href="#">DATOS</a>
+          </li>
+          <li>
+            <a href="#">OBJETIVOS</a>
+          </li>
+          <li>
+            <a href="#">FORMACIÓN</a>
+          </li>
+          <li>
+            <a href="#">EXPERIENCIA</a>
+          </li>
+          <li>
+            <a href="#">CONTACTO</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Div clearfix -->
+      <div class="clearfix"></div>
+      <!-- Comienzo de la Section principal y sus Articles -->
+      <section id="content">
+        <!-- Article de datos personales -->
+        <article class="article">
+          <h2>Datos Personales</h2>
+          <ul>
+            <li>Nombre y Apellido: Iván Ecónomo</li>
+            <li>Edad: 27 años</li>
+            <li>Dirección: T. Godoy Cruz 18**</li>
+            <li>Teléfono: +54938155677**</li>
+            <li>e-mail: ivan.economo39@gmail.com</li>
+          </ul>
+        </article>
+        <!-- Article de Objetivos profesionales -->
+        <article class="article">
+          <h2>Objetivos</h2>
+          <p>
+            En el inicio de mi carrera como programador me he propuesto como
+            objetivo adquirir todos los conocimientos necesarios para desempeñar
+            profecionalmente mi papel como desarrollador de páginas web.
+          </p>
+        </article>
+        <!-- Article de Formación educativa -->
+        <article class="article">
+          <h2>Formación</h2>
+          <ul>
+            <li>
+              Secundario completo. Orientación en Economía y Gestión de las
+              Organizaciones.
+            </li>
+          </ul>
+        </article>
+        <!-- Article de Experiencias laborales -->
+        <article class="article">
+          <h2>Experiencia</h2>
+          <ul>
+            <li>
+              "TXM Ropa por Mayor" Encargado general - Cajero - Facturaciones -
+              Administración de personal - Operaciones comerciales. Desde
+              05/2016 - Actual
+            </li>
+            <li>
+              “Razón Social: Bautista, Martín Ezequiel” (cochera) Encargado.
+              Desde 06/2019 hasta 08/2020
+            </li>
+          </ul>
+        </article>
+        <!-- Section de contacto - Formulario de contacto -->
+        <div>
+          <h2>Contacto</h2>
+          <form action="">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" placeholder="Su nombre aquí" />
+            <label for="lastname">Apellido</label>
+            <input
+              type="text"
+              id="lastname"
+              placeholder="Su apellido aquí"
+            /><br />
+            <label for="message">Información</label><br />
+            <textarea
+              name="informacion"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea
+            ><br />
+            <button type="reset">Formulario en blanco</button>
+            <input type="submit" />
+          </form>
+        </div>
+        <!-- Div con link directo para enviar e-mail -->
+        <div>
+          <h4>O, envíe un e-mail</h4>
+          <a href="mailto: ivan.economo39@gmail.com" target="_blank"
+            >Enviar e-mail</a
+          >
+        </div>
+      </section>
+      <!-- Aside -->
+      <aside id="aside">
+        <!-- Section de Otros intereses -->
+        <section class="aside__section">
+          <h3 class="aside__h3">Otros intereses</h3>
+          <!-- Div de Lenguajes de conocimiento en lenguajes de programación -->
+          <div class="div__aside">
+            <h4 class="aside__h4">Lenguajes de programación</h4>
+            <table class="aside__table">
+              <tbody>
+                <tr>
+                  <th>Lenguaje</th>
+                  <th>Nivel</th>
+                </tr>
+                <tr>
+                  <td>C#</td>
+                  <td>Básico</td>
+                </tr>
+                <tr>
+                <td>Python</td>
+                <td>Básico</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Div interés en programación de videojuegos -->
+        <div>
+          <h4>Programación de Videojuegos</h4>
+          <p>
+            Tengo un fuerte interés en aprender sobre desarrollo de videojuegos
+            basados en lenguaje C# y Unity.
+          </p>
+        </div>
+      </section>
+    </aside>
+    <!-- Div clearfix -->
+    <div class="clearfix"></div>
+    <!-- Footer de la página -->
+    <footer>
+      <!-- Div para Redes -->
+      <div>
+        <h4>Redes</h4>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/ivan.economo/" target="_blank"
+            >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+            href="https://www.reddit.com/user/Intelligent_Salary13"
+            target="_blank"
+            >Reddit</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- Div para volver al incio de la página -->
+      <div>
+        <a href="#">Volver al inicio</a>
+      </div>
+    </footer>
+  </main>
+  </body>
+  </html>
+  

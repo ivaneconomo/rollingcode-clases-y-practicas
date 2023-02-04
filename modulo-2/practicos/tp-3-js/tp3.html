@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prácticas 3 JS</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+  <header>
+    <nav class="navbar bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="../../index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left-short pb-1" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+          </svg>
+          Inicio
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="d-flex flex-column align-items-center my-5">
+      <h2 class="mb-3 pb-3 border-bottom">Ejercicios JavaScript - 3</h2>
+      <h3 class="">Prácticas con arreglos y funciones</h3>
+    </div>
+    <section class="container">
+      <h3 class="mb-3 pb-3 border-bottom">Arrays</h3>
+      <!-- Ejercicio 1 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢</h4>
+        <p>1- Crear un array llamado meses y que almacene el nombre de los doce meses del año. Mostrar por pantalla en forma de lista  los doce nombres del arreglo.</p>
+        <button class="btn btn-dark" onclick="resultadoEj1()">Resultado</button>
+        <div id="resultado1" class="mt-3"></div>
+      </article>
+      <!-- Ejercicio 2 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>2-  Crear un script que solicite al usuario mediante un prompt el nombre de ciudades y almacenarlas en un arreglo, cuando el usuario selecciona cancelar se debe mostrar el arreglo generado, luego realizar las siguientes acciones:</p>
+        <ul>
+          <li>Mostrar la longitud del arreglo.</li>
+          <li>Mostrar en el documento web los ítems de las posiciones primera, tercera y última.</li>
+          <li>Añade en última posición la ciudad de París.</li>
+          <li>Escribe por pantalla el elemento que ocupa la segunda posición.</li>
+          <li>Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona'.</li>
+        </ul>
+        <button class="btn btn-dark" onclick="resultadoEj2()">Resultado</button>
+        <div id="resultado2"></div>
+        <div id="resultado2x1"></div>
+        <div id="resultado2x2"></div>
+        <div id="resultado2x3"></div>
+      </article>
+      <!-- Ejercicio 3 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡🔴</h4>
+          <a href=""></a>
+        <p>3- Escribir un script que simule el lanzamiento de dos dados. Hacer uso de la función <a target="_blank" href="https://www.w3schools.com/jsref/jsref_random.asp">Math.random()</a> para obtener números aleatorios entre 1 y 6 para cada uno de los lanzamientos de los dados. Sumar el resultado de lanzar dos dados y anotar en un array el número de apariciones de dicha suma, repitiendo 50 veces esta operación.</p>
+        <button class="btn btn-dark" onclick="resultadoEj3()">Resultado</button>
+        <pre id="resultado3" class="mt-3"></p>
+      </article>
+    </section>
+    <!-- Ejercicios con Funciones -->
+    <section class="container">
+      <h3 class="mb-3 pb-3 border-bottom">Funciones</h3>
+      <!-- Ejercicio 4 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢</h4>
+        <p>1- Escribir el código de una función a la que se pasa como parámetro un número entero y devuelve como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el resultado devuelto por la función.</p>
+        <button class="btn btn-dark" onclick="resultadoEj4()">Resultado</button>
+        <h5 id="resultado4" class="mt-3"></h5>
+      </article>
+      <!-- Ejercicio 5 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>2- Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. A partir de la cadena que se le pasa, la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.</p>
+        <button class="btn btn-dark" onclick="resultadoEj5()">Resultado</button>
+        <h5 id="resultado5" class="mt-3"></h5>
+      </article>
+      <!-- Ejercicio 6 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>3- Solicitar por pantalla al usuario ingresar el valor de los lados de un rectángulo, luego crear una función para calcular su perímetro y mostrarlo por pantalla.</p>
+        <ul>
+          <li>La fórmula del perímetro es: p = 2 * ( a + b ).</li>
+        </ul>
+        <button class="btn btn-dark" onclick="resultadoEj6()">Resultado</button>
+        <pre id="resultado6" class="mt-3"></pre>
+      </article>
+      <!-- Ejercicio 7 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢🟡</h4>
+        <p>4- Escriba un script que muestre la tabla de multiplicar de un número ingresado por pantalla, la creación de la tabla debe ser realizada con una función y mostrar solo los resultados del 1 al 10 del número elegido por el usuario.</p>
+        <button class="btn btn-dark" onclick="resultadoEj7()">Resultado</button>
+        <pre id="resultado7" class="mt-3"></pre>
+      </article>
+    </section>
+  </main>
+  <footer class="bg-dark text-center text-white py-4">
+    <p>Rolling Code comisión 25i - Iván Ecónomo - 2022</p>
+  </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <!-- JS custom -->
+  <script src="./js/app.js"></script>
+</body>
+</html>

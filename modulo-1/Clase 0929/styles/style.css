@@ -1,0 +1,22 @@
+.iconSvg {
+  background-color: #e8f9f4;
+  color: rgb(32,201,151);
+  border-radius: 20%;
+}
+
+.textStyle {
+  font-size: 1,25rem;
+}
+
+.logos {
+  width: 75px;
+  height: 75px;
+  transition: width 100ms, height 100ms;
+}
+
+.logos:hover {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  width: 85px;
+  height: 85px;
+}

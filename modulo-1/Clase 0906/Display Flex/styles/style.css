@@ -1,0 +1,73 @@
+.azul {
+  background-color: blue;
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+}
+
+.rojo {
+  background-color: red;
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+}
+
+.verde {
+  background-color: green;
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+}
+
+.amarillo {
+  background-color: yellow;
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+}
+
+div {
+  font-size: 50px;
+}
+
+.container {
+  height: 600px;
+  background-color: cadetblue;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.containerBasis {
+  display: flex;
+}
+
+.containerBasis div {
+  background-color: chocolate;
+  margin: 5px;
+  height: 50px;
+}
+
+.containerGrow {
+  display: flex;
+}
+
+.containerGrow div {
+  background-color: pink;
+  margin: 5px;
+  height: 50px;
+}
+
+.containerShrink {
+  display: flex;
+}
+
+.containerShrink div {
+  background-color: greenyellow;
+  margin: 5px;
+  width: 80px;
+  
+}

@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: aqua;
+}
+
+nav li {
+  background-color: rgb(255, 0, 0);
+}
+
+main {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+#parrafo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#sizeFontP {
+  color: beige;
+}
+
+#contMain h3 {
+  color: wheat;
+}
+
+#myDiv {
+  background-color: violet;
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px 10px 10px ;
+  padding-top: 20px;
+}
+
+.footer .colorParrafoFooter {
+  text-align: center;
+}
+
+/* .colorParrafoFooter:active {
+  font-size: 30px;
+  
+  display: inline-block;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  text-align: center;
+}
+
+.colorParrafoFooter:hover {
+  font-size: 30px;
+  
+  display: inline-block;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  text-align: center;
+} */
+
+.footerLink:visited{
+  color: red;
+}
+
+.footerLink:link{
+  color: chartreuse;
+}
+
+.lista:first-child{
+  color: aliceblue;
+}

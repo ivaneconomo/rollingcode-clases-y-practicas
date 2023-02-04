@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prácticas 4 JS</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+  <header>
+    <nav class="navbar bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="../../index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left-short pb-1" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+          </svg>
+          Inicio
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="d-flex flex-column align-items-center my-5">
+      <h2 class="mb-3 pb-3 border-bottom">Ejercicios JavaScript - 4</h2>
+      <h3 class="">Prácticas con POO - Clases, Objetos y Métodos.</h3>
+    </div>
+    <section class="container">
+      <h3 class="mb-3 pb-3 border-bottom">Crear Objetos</h3>
+      <!-- Ejercicio 1 -->
+      <article class="mb-5 p-2 border">
+        <h4>Dificultad:🟢</h4>
+        <p>1- Crea un objeto llamado auto que tenga algunas características como el color, marca, modelo y si está encendido o apagado. Crea los métodos necesarios para permitir encender y apagar el auto.</p>
+        <button class="btn btn-dark" onclick="resultadoEj1()">Resultado</button>
+        <div id="resultado1" class="mt-3"></div>
+      </article>
+    </section>
+    <section class="container">
+      <h3 class="mb-3 pb-3 border-bottom">Modelando Clases</h3>
+      <!-- Ejercicio 2 -->
+      <article class="mb-5 p-2 border">
+        <h4>Cuenta bancaria - Dificultad:🟢🟡</h4>
+        <p>2-Escribe un programa que cree un objeto "cuenta" con las siguientes propiedades:</p>
+        <ul>
+          <li>Una propiedad titular con el valor "Alex".</li>
+          <li>Una propiedad saldo, teniendo como valor inicial 0.</li>
+          <li>Un método ingresar() que permita añadir dinero a la cuenta, pasando la cantidad como parámetro.</li>
+          <li>Un método extraer() que permita retirar la cantidad pasada como parámetro.</li>
+          <li>Un método informar() que retorne la información del estado de la cuenta.</li>
+        </ul>
+        <p>Utiliza este objeto para mostrar la descripción, ingresar y extraer dinero y volver a mostrar la descripción del estado de la cuenta.</p>
+        <button class="btn btn-dark" onclick="resultadoEj2()">Resultado</button>
+        <div id="resultado2" class="mt-3"></div>
+      </article>
+      <!-- Ejercicio 3 -->
+      <article class="mb-5 p-2 border">
+        <h4>Rectángulos - Dificultad:🟢</h4>
+        <p>3-Escribe una clase que permita crear distintos objetos “rectángulos”, con las propiedades de alto y ancho, mas los métodos necesarios para modificar y mostrar sus propiedades, calcular el perímetro y el área.</p>
+        <button type="button" class="btn btn-dark" onclick="crearRectangulo()">Crear rectángulo</button>
+        <div class="d-flex">
+          <div id="crearRectangulo" class="mt-2 col-lg-2 d-flex flex-column justify-content-center align-items-center d-none">
+            <!-- Muestra los input para modificar las propiedades del rectángulo -->
+            <div class="d-flex flex-column align-items-center">
+              <div class="d-flex border rounded w-100 p-2">
+                <div class="d-flex flex-column justify-content-center me-1">
+                  <label for="inAlto">Alto</label>
+                  <label class="mt-2" for="inAncho">Ancho</label>
+                </div>
+                <div class="d-flex flex-column justify-content-center me-1">
+                  <input id="inAlto" type="number" min="1" max="300" maxlength="3" placeholder="300px">
+                  <input class="mt-2" id="inAncho" type="number" min="1" max="300" maxlength="3" placeholder="300px">
+                </div>
+              </div>
+              <button id="btnPropiedades" class="btn btn-outline-success mt-2" type="button">Aplicar propiedades</button>
+            </div>
+            <!-- Muestra las propiedades en una lista -->
+            <div id="mostrarPropiedades" class="mt-2 d-none">
+              <span>Propiedades:</span>
+              <ul id="listaPropiedades" class="list-group">
+                <li id="liAltoRectangulo" class="list-group-item"></li>
+                <li id="liAnchoRectangulo" class="list-group-item"></li>
+                <li id="liPerimetroRectangulo" class="d-none"></li>
+                <li id="liAreaRectangulo" class="d-none"></li>
+              </ul>
+            </div>
+            <!-- Muestra los botones para calcular perímetro y área -->
+            <div id="calcular" class="mt-2 d-flex d-none">
+              <div class="btn-group-vertical">
+                <button id="btnPerimetro" class="btn btn-outline-warning" type="button">Calcular perímetro</button>
+                <button id="btnArea" class="btn btn-outline-warning" type="button">Calcular área</button>
+              </div>
+            </div>
+          </div>
+          <div id="containerDivRectangulo" class="col-lg-10 d-flex justify-content-center align-items-center border rounded mt-3 d-none">
+            <div id="divRectangulo" class="bg-warning border border-danger d-none"></div>
+          </div>
+        </div>
+      </article>
+      <!-- Ejercicio 4 -->
+      <article class="mb-5 p-2 border">
+        <h4>Producto - Dificultad:🟢🟡</h4>
+        <p>4- Escribe una clase Producto para crear objetos. Estos objetos, deben presentar las propiedades código, nombre y precio, además del método imprime datos, el cual escribe por pantalla los valores de sus propiedades. Posteriormente, cree tres instancias de este objeto y guárdalas en un array. Por último, utilice el método imprime datos para mostrar por pantalla los valores de los tres objetos instanciados.</p>
+        <button class="btn btn-dark" onclick="resultadoEj4()">Resultado</button>
+        <div id="resultado4" class="mt-3"></div>
+      </article>
+      <!-- Ejercicio 5 -->
+      <article class="mb-5 p-2 border">
+        <h4>Generaciones - Dificultad:🟢🟡🔴</h2>
+        <p>5- Crea una clase llamada Persona que siga las siguientes condiciones:</p>
+        <ul>
+          <li>Sus propiedades son:
+            <ul>
+              <li>Nombre</li>
+              <li>Edad</li>
+              <li>DNI</li>
+              <li>Sexo (H hombre, M mujer)</li>
+              <li>Peso</li>
+              <li>Altura</li>
+              <li>Año de nacimiento</li>
+            </ul>
+            <p>Si quieres añadir alguna propiedad extra puedes hacerlo.</p>
+          </li>
+        </ul>
+        <ul>
+          <li>Los métodos que se debe poder utilizar  son:
+            <ul>
+              <li>mostrarGeneracion(): Éste método debe mostrar un mensaje indicando a qué generación pertenece la persona creada y cual es el rasgo característico de esta generación.<br>Para realizar este método tener en cuenta la siguiente tabla de generaciones:
+                <div class="container">
+                  <img class="card my-4 w-50" src="./img/taxonomia-de-generaciones.png" alt="Taxonomía de generaciones.">
+                </div>
+              </li>
+              <li>esMayorDeEdad(): Indica si es mayor de edad, devuelve un mensaje indicando que la persona es mayor de edad.</li>
+              <li>mostrarDatos(): Devuelve toda la información del objeto.</li>
+              <li>generaDNI(): Genera un número aleatorio de 8 cifras.</li>
+            </ul>
+          </li>
+        </ul>
+        <button class="btn btn-dark" onclick="resultadoEj5()">Resultado</button>
+        <div id="resultado5" class="mt-3"></div>
+      </article>
+      <!-- Ejercicio 6 -->
+      <article class="mb-5 p-2 border">
+        <h4>Libros - Dificultad:🟢🟡🔴</h4>
+        <p>6- Crear una clase Libro que contenga al menos las siguientes propiedades:</p>
+        <ul>
+          <li>ISBN</li>
+          <li>Título</li>
+          <li>Autor</li>
+          <li>Número de páginas</li>
+        </ul>
+        <p>Crear sus respectivos métodos get y set correspondientes para cada propiedad.<br>
+          Crear el método mostrarLibro() para mostrar la información relativa al libro con el siguiente formato: “El libro xxx con ISBN xxx creado por el autor xxx tiene páginas xxx”<br>
+          Crear al menos 2 objetos libros y utilizar el método mostrarLibro();<br>
+          Por último, indicar cuál de los 2 objetos “libros” tiene más páginas.
+        </p>
+        <button class="btn btn-dark" onclick="resultadoEj6()">Resultado</button>
+        <div id="resultado6" class="mt-3"></div>
+      </article>
+      <!-- Ejercicio 7 -->
+      <article class="mb-5 p-2 border">
+        <h4>Agenda telefónica - Dificultad:🟢🟡🔴</h4>
+        <p>7- Nos piden realizar una agenda telefónica de contactos.<br>
+          Un contacto está definido por un nombre y un teléfono. Se considera que un contacto es igual a otro cuando sus nombres son iguales.<br>
+          Una agenda de contactos está formada por un conjunto de contactos. Se podrá crear de dos formas, indicando nosotros el tamaño o con un tamaño por defecto (10).<br>
+          Los métodos de la agenda serán los siguientes:
+        </p>
+        <ul>
+          <li>aniadirContacto(Contacto): Añade un contacto a la agenda, si la agenda no puede almacenar más contactos indicar por pantalla.</li>
+          <li>existeContacto(Conctacto): Indica si el contacto pasado existe o no.</li>
+          <li>listarContactos(): Lista toda la agenda.</li>
+          <li>buscarContacto(nombre): Busca un contacto por su nombre y muestra su teléfono.</li>
+          <li>eliminarContacto(Contacto c): Elimina el contacto de la agenda, indica si se ha eliminado o no por pantalla.</li>
+          <li>agendaLlena(): Indica si la agenda está llena.</li>
+          <li>huecosLibres(): Indica cuántos contactos más podemos ingresar.</li>
+        </ul>
+        <p>Crea un menú con opciones por consola para probar todas estas funcionalidades.</p>
+        <button class="btn btn-dark" onclick="resultadoEj7()">Resultado</button>
+        <div id="resultado7" class="mt-3"></div>
+      </article>
+    </section>
+  </main>
+  <footer class="bg-dark text-center text-white py-4">
+    <p>Rolling Code comisión 25i - Iván Ecónomo - 2022</p>
+  </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <!-- JS custom -->
+  <script src="./js/app.js"></script>
+</body>
+</html>

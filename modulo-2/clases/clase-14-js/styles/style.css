@@ -1,0 +1,9 @@
+.myDiv {
+  background-color: darkslateblue;
+  height: 80px;
+  color: yellowgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
