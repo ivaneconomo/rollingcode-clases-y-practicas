@@ -3,7 +3,7 @@ import axios from "axios";
 import CustomCard from "../CustomCard/CustomCard";
 
 const Main = () => {
-  const [products, setProducts] = useState([]);
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
     getData();
@@ -11,9 +11,9 @@ const Main = () => {
 
   const getData = () => {
     axios
-      .get("http://localhost:3001/products")
+      .get("https://rickandmortyapi.com/api/character")
       .then(({ data }) => {
-        setProducts(data);
+        setCharacters(data.results);
       })
       .catch((response) => {
         console.warn(response);
@@ -26,8 +26,8 @@ const Main = () => {
         Bienvenido a Rick and Morty WEB
       </h1>
       <div className='row my-5 justify-content-center'>
-        {products.map((prod) => (
-          <CustomCard key={prod.id} prod={prod} />
+        {characters.map((character) => (
+          <CustomCard key={character.id} character={character} />
         ))}
       </div>
     </div>

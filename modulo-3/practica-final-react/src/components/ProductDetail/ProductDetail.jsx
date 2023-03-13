@@ -3,10 +3,12 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 import { Button } from "bootstrap";
+import CustomLoader from "../CustomLoader/CustomLoader";
 
 const ProductDetail = () => {
   const { id } = useParams();
-  const [product, setProduct] = useState({});
+  const [character, setCharacter] = useState({});
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     getData();
@@ -14,29 +16,37 @@ const ProductDetail = () => {
 
   const getData = () => {
     axios
-      .get(`http://localhost:3001/products/${id}`)
+      .get(`https://rickandmortyapi.com/api/character/${id}`)
       .then(({ data }) => {
-        setProduct(data);
+        setCharacter(data);
+        setIsLoading(true);
       })
       .catch((err) => console.warn(err));
   };
 
   return (
     <>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className='d-block w-100'
-            src={product.img}
-            alt={product.title}
-          />
-        </Carousel.Item>
-      </Carousel>
-      <div>
-        <h2>{product.title}</h2>
-        <p>{product.desc}</p>
-        <Button>Comprar ${product.price}</Button>
-      </div>
+      { isLoading ? (
+        <div>
+          <Carousel>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={character.image}
+                alt={character.name}
+              />
+            </Carousel.Item>
+          </Carousel>
+          <div>
+            <h2>{character.name}</h2>
+            <p>{character.species}</p>
+            <Button>Comprar ${character.type}</Button>
+          </div>
+        </div>
+      ) : (
+        <CustomLoader />
+        )
+      };
     </>
   );
 };
