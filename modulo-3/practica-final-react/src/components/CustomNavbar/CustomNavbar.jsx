@@ -12,7 +12,7 @@ const CustomNavbar = () => {
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='me-auto'>
-            <NavLink className='nav-link' to={"/home"}>
+            <NavLink className='nav-link' to={"/"}>
               Home
             </NavLink>
           </Nav>
