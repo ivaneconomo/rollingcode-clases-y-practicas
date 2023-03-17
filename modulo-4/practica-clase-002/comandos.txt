@@ -1,0 +1,13 @@
+npm init -y  //Inicializamos node js (autocompletar -y)
+
+npm install -g nodemon  //Instalamos nodemon (global o local)
+
+npm install express --save  //Instalamos Express (--save)
+  const express = require("express");
+  const app = express();
+
+npm install dotenv --save //Instalamos dotenv para guardar información sensible (--save)
+
+npm i cors //CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+
+npm i morgan //HTTP request logger middleware for node.js
