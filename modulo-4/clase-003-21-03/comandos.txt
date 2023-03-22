@@ -1,0 +1,13 @@
+npm init -y  //Inicializamos node js (-y autocompletar).
+
+npm install -g nodemon  //Instalamos nodemon (-g instalación global).
+
+npm install express --save  //Instalamos Express (--save indica que la dependencia se agregará automáticamente al archivo "package.json" del proyecto,).
+  const express = require("express");
+  const app = express();
+
+npm install dotenv --save //Instalamos dotenv para guardar información sensible.
+
+npm i cors //CORS es un paquete de node.js que proporciona un middleware para Connect/Express que se puede usar para habilitar CORS con varias opciones.
+
+npm i morgan //El middleware de registro de solicitudes HTTP para node.js.
